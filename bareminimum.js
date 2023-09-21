@@ -69,7 +69,7 @@ function cursor(e) {
   tricksCursor.style.left = e.clientX + "px";
 }
 
-$("a").mouseenter(function () {
+$(".nav_link, .social_link").mouseenter(function () {
   window.removeEventListener("mousemove", cursor);
   var tricksWidth = $(this).outerWidth() / 2;
   var tricksHeight = $(this).outerHeight() / 2;
@@ -80,19 +80,15 @@ $("a").mouseenter(function () {
   tricksCursor.style.left = tricksLeft + tricksWidth + "px";
 });
 
-$("a").mouseleave(function () {
+$(".nav_link, .social_link").mouseleave(function () {
   window.addEventListener("mousemove", cursor);
 });
 
-$("a").mouseleave(function () {
+$(".nav_link, .social_link").mouseleave(function () {
   $(".cursor_dot").removeClass("is-larger");
 });
 
-$(".logo_img-link").mouseenter(function () {
-  $(".cursor_dot").addClass("is-larger");
-});
-
-$("a").mouseenter(function () {
+$(".nav_link, .social_link").mouseenter(function () {
   $(".cursor_dot").addClass("is-larger");
 });
 
